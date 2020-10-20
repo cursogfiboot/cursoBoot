@@ -10,6 +10,8 @@ import curso.gfi.boot.entidades.Estado;
 public interface EstadosCrudRepository extends CrudRepository<Estado, Integer> {
 
 	
+	//busqueda de estados por tipo
+	
 	@Query(value = "from Estado e where e.tipo=:tipo")
 	public Iterable<Estado> getEstadoByTipo(int tipo);
 	
