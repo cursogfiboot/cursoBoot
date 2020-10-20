@@ -3,9 +3,9 @@ package curso.gfi.boot.repositorios;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import curso.gfi.boot.entidades.Estado;
+import curso.gfi.boot.entidades.Acceso;
 
 @Repository
-public interface EstadosCrudRepository extends CrudRepository<Estado, Integer> {
+public interface AccesosCrudRepository extends CrudRepository<Acceso, Integer> {
 
 }

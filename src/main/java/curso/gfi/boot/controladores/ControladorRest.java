@@ -20,13 +20,12 @@ public class ControladorRest {
 	@Autowired
 	private EstadosService service;
 	
-	@GetMapping("/estados/{tipo}")
-	public Iterable<Estado> getPersona(@PathVariable int tipo) {
-		
-		Iterable<Estado> estados= getService().getEstadosByTipo(tipo);
-		
-		return estados;
-	}
+//	@GetMapping("/estados/{tipo}")
+//	public Iterable<Estado> getPersona(@PathVariable int tipo) {
+//		
+//		Iterable<Estado> estados= getService().getEstadosByTipo(tipo);
+//		return estados;
+//	}
 
 	public EstadosService getService() {
 		return service;
