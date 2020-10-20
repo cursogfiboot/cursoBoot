@@ -1,16 +1,15 @@
 package curso.gfi.boot.controladores;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import curso.gfi.boot.entidades.Estado;
-import curso.gfi.boot.repositorios.EstadosCrudRepository;
+
 import curso.gfi.boot.servicios.EstadosService;
 
 @RestController
@@ -20,7 +19,7 @@ public class ControladorRest {
 	@Autowired
 	private EstadosService service;
 	
-	@GetMapping("/estados/{tipo}")
+	@GetMapping("/estadostipo/{tipo}")
 	public Iterable<Estado> getPersona(@PathVariable int tipo) {
 		
 		Iterable<Estado> estados= getService().getEstadosByTipo(tipo);
