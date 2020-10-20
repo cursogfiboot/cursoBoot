@@ -12,7 +12,7 @@ public interface EstadosCrudRepository extends CrudRepository<Estado, Integer> {
 	
 	//busqueda de estados por tipo
 	
-	@Query(value = "from Estado e where e.tipo=:tipo")
+	@Query(value = "from usuarios_estados e where e.tipo=:tipo")
 	public Iterable<Estado> getEstadoByTipo(int tipo);
 	
 	
