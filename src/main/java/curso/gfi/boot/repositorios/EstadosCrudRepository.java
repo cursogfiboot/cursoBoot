@@ -16,4 +16,6 @@ public interface EstadosCrudRepository extends CrudRepository<Estado, Integer> {
 	public Iterable<Estado> getEstadoByTipo(int tipo);
 	
 	
+	
+	
 }
