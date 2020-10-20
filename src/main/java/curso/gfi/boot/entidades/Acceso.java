@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.context.annotation.Lazy;
+
 @Entity
 @Table(name="accesos")
 public class Acceso
@@ -50,6 +52,7 @@ public class Acceso
 	
 	@ManyToOne
 	@JoinColumn(name="empleados_id")
+	@Lazy
 	private Empleado empleado;
 
 	public int getId()
