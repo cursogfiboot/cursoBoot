@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name="estados")
@@ -21,7 +22,8 @@ public class Estado
 	
 	@Column
 	private int tipo;
-
+	
+	
 	public int getTipo()
 	{
 		return tipo;
@@ -51,6 +53,7 @@ public class Estado
 	{
 		this.descripcion = descripcion;
 	}
+
 	
 	
 	

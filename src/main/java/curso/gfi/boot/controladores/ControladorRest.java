@@ -11,31 +11,31 @@ import org.springframework.web.bind.annotation.RestController;
 
 import curso.gfi.boot.entidades.Estado;
 import curso.gfi.boot.repositorios.EstadosCrudRepository;
+import curso.gfi.boot.servicios.EstadosService;
 
 @RestController
 @RequestMapping(value = "/api")
 public class ControladorRest {
 
 	@Autowired
-	private EstadosCrudRepository repository;
-	
+	private EstadosService service;
 	
 	@GetMapping("/estados/{tipo}")
 	public Iterable<Estado> getPersona(@PathVariable int tipo) {
 		
-		Iterable<Estado> estados= getRepository().getEstadoByTipo(tipo);
+		Iterable<Estado> estados= getService().getEstadosByTipo(tipo);
 		
 		return estados;
 	}
 
+	public EstadosService getService() {
+		return service;
+	}
 
-	public EstadosCrudRepository getRepository() {
-		return repository;
+	public void setService(EstadosService service) {
+		this.service = service;
 	}
 
 
-	public void setRepository(EstadosCrudRepository repository) {
-		this.repository = repository;
-	}
-
+	
 }
