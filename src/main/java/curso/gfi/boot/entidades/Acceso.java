@@ -43,10 +43,10 @@ public class Acceso
 	private Date fecha;
 	
 	@Column
-	private int horaReal;
+	private int hora_real;
 	
 	@Column
-	private int minutoReal;
+	private int minuto_real;
 	
 	@ManyToOne
 	@JoinColumn(name="empleados_id")
@@ -132,24 +132,24 @@ public class Acceso
 		this.fecha = fecha;
 	}
 
-	public int getHoraReal()
+	public int getHora_real()
 	{
-		return horaReal;
+		return hora_real;
 	}
 
-	public void setHoraReal(int horaReal)
+	public void setHora_real(int hora_real)
 	{
-		this.horaReal = horaReal;
+		this.hora_real = hora_real;
 	}
 
-	public int getMinutoReal()
+	public int getMinuto_real()
 	{
-		return minutoReal;
+		return minuto_real;
 	}
 
-	public void setMinutoReal(int minutoReal)
+	public void setMinuto_real(int minuto_real)
 	{
-		this.minutoReal = minutoReal;
+		this.minuto_real = minuto_real;
 	}
 
 	public Empleado getEmpleado()
