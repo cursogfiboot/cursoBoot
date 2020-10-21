@@ -7,13 +7,12 @@ import org.springframework.stereotype.Repository;
 import curso.gfi.boot.entidades.Estado;
 
 @Repository
-public interface EstadosCrudRepository extends CrudRepository<Estado, Integer> {
+public interface EstadoCrudRepository extends CrudRepository<Estado, Integer> {
 
-	
 	//busqueda de estados por tipo
 	
-	@Query(value = "from Estado e where e.tipo=:tipo")
-	public Iterable<Estado> getEstadoByTipo(int tipo);
-	
+		@Query(value = "from Estado e where e.tipo=:tipo")
+		public Iterable<Estado> getEstadoByTipo(int tipo);
+			
 	
 }
