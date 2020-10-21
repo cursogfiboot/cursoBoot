@@ -8,5 +8,6 @@ import curso.gfi.boot.entidades.Empleado;
 @Repository
 public interface EmpleadoCrudRepository extends CrudRepository<Empleado, Integer> {
 
+	
 
 }

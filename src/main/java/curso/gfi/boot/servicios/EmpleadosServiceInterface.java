@@ -16,5 +16,8 @@ public interface EmpleadosServiceInterface {
 	public Optional<Empleado> findById(Integer arg0);
 
 	public Empleado save(Empleado emplead0);
+	
+	public void deleteById(Integer arg0);
+
 
 }

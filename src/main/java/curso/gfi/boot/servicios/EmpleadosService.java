@@ -2,6 +2,7 @@ package curso.gfi.boot.servicios;
 
 import java.util.Optional;
 
+import org.aspectj.apache.bcel.generic.InstructionTargeter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,45 +14,52 @@ public class EmpleadosService implements EmpleadosServiceInterface {
 	
 	
 	@Autowired	
-	private EmpleadoCrudRepository repository;
+	private EmpleadoCrudRepository repositoryEmpleados;
 
 	@Override
 	public void delete(Empleado empleado) {
 		// TODO Auto-generated method stub
-		
+		getRepositoryEmpleados().delete(empleado);
 	}
 
 	@Override
 	public void deleteAll() {
 		// TODO Auto-generated method stub
-		
+		getRepositoryEmpleados().deleteAll();
 	}
 
 	@Override
 	public Iterable<Empleado> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return getRepositoryEmpleados().findAll();
 	}
 
 	@Override
 	public Optional<Empleado> findById(Integer arg0) {
 		// TODO Auto-generated method stub
-		return null;
+		return getRepositoryEmpleados().findById(arg0);
 	}
 
 	@Override
-	public Empleado save(Empleado emplead0) {
+	public Empleado save(Empleado empleado) {
+		return getRepositoryEmpleados().save(empleado);
+	}
+
+	@Override
+	public void deleteById(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		getRepositoryEmpleados().deleteById(id);
 	}
 
-	public EmpleadoCrudRepository getRepository() {
-		return repository;
+	
+	public EmpleadoCrudRepository getRepositoryEmpleados() {
+		return repositoryEmpleados;
 	}
 
-	public void setRepository(EmpleadoCrudRepository repository) {
-		this.repository = repository;
+	public void setRepositoryEmpleados(EmpleadoCrudRepository repositoryEmpleados) {
+		this.repositoryEmpleados = repositoryEmpleados;
 	}
+
+	
 	
 	
 
