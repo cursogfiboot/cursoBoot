@@ -3,10 +3,8 @@ package curso.gfi.boot.servicios;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
-import curso.gfi.boot.entidades.Estado;
 import curso.gfi.boot.entidades.UsuarioEstado;
 import curso.gfi.boot.repositorios.UsuarioEstadoCrudRepository;
 
