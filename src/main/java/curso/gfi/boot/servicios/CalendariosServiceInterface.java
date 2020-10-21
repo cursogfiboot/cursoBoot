@@ -18,5 +18,7 @@ public interface CalendariosServiceInterface {
 	
 	public void deleteAll();
 	
+	public void deleteById(Integer id);
+	
 
 }

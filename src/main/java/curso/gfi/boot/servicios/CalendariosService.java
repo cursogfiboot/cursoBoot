@@ -10,47 +10,49 @@ import curso.gfi.boot.repositorios.CalendariosCrudRepository;
 
 @Service
 public class CalendariosService implements CalendariosServiceInterface {
-	
+
 	@Autowired
-	private CalendariosCrudRepository repository;
+	private CalendariosCrudRepository repositoryCalendarios;
 
 	@Override
 	public Iterable<Calendario> getCalendariosById(int id) {
-		// TODO Auto-generated method stub
-		return getRepository().getCalendarioById(id);
-	}
-		
-		public CalendariosCrudRepository getRepository() {
-			return repository;
-		}
-
-		public void setRepository(CalendariosCrudRepository repository) {
-			this.repository = repository;
-		}
-
-
-		@Override
-		public Calendario save(Calendario calendario) {
-			return null;
-		}
-
-		@Override
-		public void delete(Calendario entity) {
-		}
-
-		@Override
-		public Iterable<Calendario> findAll() {
-			return null;
-		}
-
-		@Override
-		public Optional<Calendario> findById(Integer arg0) {
-			return null;
-		}
-
-		@Override
-		public void deleteAll() {
-			
-		}
+		return getRepositoryCalendarios().getCalendarioById(id);
 	}
 
+	@Override
+	public Calendario save(Calendario calendario) {
+		return getRepositoryCalendarios().save(calendario);
+	}
+
+	@Override
+	public void delete(Calendario entity) {
+	}
+
+	@Override
+	public Iterable<Calendario> findAll() {
+		return getRepositoryCalendarios().findAll();
+	}
+
+	@Override
+	public Optional<Calendario> findById(Integer id) {
+		return getRepositoryCalendarios().findById(id);
+	}
+
+	@Override
+	public void deleteAll() {
+
+	}
+
+	public CalendariosCrudRepository getRepositoryCalendarios() {
+		return repositoryCalendarios;
+	}
+
+	public void setRepositoryCalendarios(CalendariosCrudRepository repositoryCalendarios) {
+		this.repositoryCalendarios = repositoryCalendarios;
+	}
+
+	@Override
+	public void deleteById(Integer id) {
+		getRepositoryCalendarios().deleteById(id);
+	}
+}
