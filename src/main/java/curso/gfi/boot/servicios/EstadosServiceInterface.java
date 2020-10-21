@@ -3,17 +3,20 @@ package curso.gfi.boot.servicios;
 import java.util.Optional;
 
 import curso.gfi.boot.entidades.Estado;
+import curso.gfi.boot.entidades.UsuarioEstado;
 
 public interface EstadosServiceInterface {
 
-	public Estado save(Estado estado);
+	public UsuarioEstado save(UsuarioEstado estado);
 
-	public Optional<Estado> findById(Integer id);
+	public Optional<UsuarioEstado> findById(Integer id);
 
-	public Iterable<Estado> findAll();
+	public Iterable<UsuarioEstado> findAll();
 
-	public void delete(Estado entity);
+	public void delete(UsuarioEstado entity);
 
 	public void deleteAll();
+	
+	public void deleteById(Integer id);
 
 }
