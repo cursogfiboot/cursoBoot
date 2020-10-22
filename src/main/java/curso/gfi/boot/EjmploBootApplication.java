@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @SpringBootApplication
-
 public class EjmploBootApplication {
 
 	public static void main(String[] args) {

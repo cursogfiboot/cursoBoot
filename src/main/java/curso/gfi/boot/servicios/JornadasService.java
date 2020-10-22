@@ -8,6 +8,7 @@ import curso.gfi.boot.entidades.Jornada;
 import curso.gfi.boot.repositorios.JornadasCrudRepository;
 
 public class JornadasService implements JornadasServiceInterface {
+	
 	@Autowired	
 	private JornadasCrudRepository repository;
 	
@@ -41,11 +42,11 @@ public class JornadasService implements JornadasServiceInterface {
 		return getRepository().save(arg0);
 	}
 	
-	public JornadasCrudRepository getRepository() {
+	private JornadasCrudRepository getRepository() {
 		return repository;
 	}
 
-	public void setRepository(JornadasCrudRepository repository) {
+	private void setRepository(JornadasCrudRepository repository) {
 		this.repository = repository;
 	}
 }
